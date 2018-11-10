@@ -1,0 +1,7 @@
+menuentry "FreeBSD" --class freebsd --class bsd --class os {
+    insmod zfs
+    insmod bsd
+    search -s -l zroot
+    kfreebsd /@/boot/zfsloader
+    kfreebsd_loadenv /@/boot/device.hints
+}
