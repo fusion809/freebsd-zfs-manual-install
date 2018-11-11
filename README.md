@@ -1,4 +1,4 @@
-# Manual FreeBSD 11.2 installation to a ZFS
+# Manual FreeBSD 11.2 installation to a ZFS, alongside Arch Linux ext4 install
 
 This repository pertains to a VirtualBox virtual machine of mine, that dual boots Arch Linux on a ext4 filesystem and FreeBSD 11.2 on a ZFS (both on the same virtual disk). Arch Linux does **not** need [ZFS][10] installed in order for the dual-boot to work, although it is helpful for, for example, accessing the files in ZFS from Arch. 
 
