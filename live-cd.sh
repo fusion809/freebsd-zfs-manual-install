@@ -20,7 +20,7 @@ gpart add -t freebsd-boot -s 128k -l boot ada0
 gpart add -t freebsd-zfs -l system ada0
 
 # This command seems deprecated as it returns errors mentioning missing inputs
-zfs import
+#zfs import
 
 # Create mount point
 mkdir /tmp/zfs
