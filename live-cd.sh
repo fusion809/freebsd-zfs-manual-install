@@ -84,7 +84,7 @@ tar xvJf /usr/freebsd-dist/src.txz
 
 # Bootstrap boot
 gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 4 ada0
-cd /mnt/zfs/boot
+cd /tmp/zfs/boot
 echo 'zfs_load="YES"' > loader.conf
 echo 'vfs.root.mountfrom="zfs:zroot"' >> loader.conf
 echo 'zfs_enable="YES"' > ../etc/rc.conf
