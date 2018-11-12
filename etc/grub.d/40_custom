@@ -1,3 +1,4 @@
+# Related thread: https://unix.stackexchange.com/questions/480829/how-to-create-a-grub-entry-for-a-freebsd-on-zfs-installation
 menuentry "FreeBSD" --class freebsd --class bsd --class os {
     insmod zfs
     insmod bsd
