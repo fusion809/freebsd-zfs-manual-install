@@ -5,9 +5,9 @@
 # Partition table is GPT, with BIOS firmware. 
 # /dev/sda1	/dev/ada0p1	1M	BIOS boot
 # /dev/sda2	/dev/ada0p2	4G	Linux swap
-# /dev/sda3	/dev/ada0p3	30G	Arch Linux root file system (ext4)
+# /dev/sda3	/dev/ada0p3	50G	Arch Linux root file system (ext4)
 # /dev/sda4	/dev/ada0p4	128k	FreeBSD boot
-# /dev/sda5	/dev/ada0p5	94G	FreeBSD ZFS
+# /dev/sda5	/dev/ada0p5	74G	FreeBSD ZFS
 
 # The following line would only be executed if we're not talking about dual-boot
 # gpart destroy -F ada0
@@ -78,6 +78,8 @@ cd /tmp/zfs
 tar xvJf /usr/freebsd-dist/base.txz
 tar xvJf /usr/freebsd-dist/kernel.txz
 tar xvJf /usr/freebsd-dist/lib32.txz
+## The following are the optional archives to decompress, if you wish to
+## reduce the disk space you use you can omit them.
 tar xvJf /usr/freebsd-dist/ports.txz
 tar xvJf /usr/freebsd-dist/doc.txz
 tar xvJf /usr/freebsd-dist/src.txz
