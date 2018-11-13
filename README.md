@@ -77,7 +77,7 @@ The main source of this information is [this FreeBSD forum post from 2017][18] (
 
 ## License
 
-Everything that is mine is licensed under the [GPLv3][20] license. 
+Everything that is mine to license is licensed under the [GPLv3][20] license. 
 
 [1]: https://en.wikipedia.org/wiki/VirtualBox
 [2]: https://en.wikipedia.org/wiki/Arch_Linux
