@@ -13,7 +13,7 @@ These are my more relevant settings:
 - Operating system: Arch Linux (64-bit).
 	- This does not matter too much, you can choose FreeBSD if you wish, but the FreeBSD system still works fine with this option set to Arch.  
 - Base memory: 4096 MB.
-	- I think you could get away with even 512 MB, as we are working entirely at the command-line. 
+	- I think you could get away with even less than 512 MB, as we are working entirely at the command-line, but I chose 4 GB just to be safe.
 - Processors: 6.
 	- This is entirely up to you, I chose so many cores because I could and because I wanted the tedious parts of this to go as quickly as possible. 
 - Boot order: Floppy, Optical, Hard Disk.
