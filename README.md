@@ -48,7 +48,7 @@ Boot the live DVD image (filename: [FreeBSD-11.2-RELEASE-amd64-dvd1.iso][9]), in
 
 ![FreeBSD Installer Prompt][10]
 
-select "Shell", which you can enter by pressing <kbd>s</kbd>. Then run [`live-cd.sh`][10]; you can do this either by manually executing each command (which is probably wisest, especially if you are deviating a little from the way I did things), or by running:
+select "Shell", which you can enter by pressing <kbd>s</kbd>. Then run [`live-cd.sh`][11]; you can do this either by manually executing each command (which is probably wisest, especially if you are deviating a little from the way I did things), or by running:
 
 ```sh
 fetch --no-verify-peer https://github.com/fusion809/freebsd-zfs-manual-install/raw/master/live-cd.sh -o /tmp/live-cd.sh
@@ -57,18 +57,18 @@ fetch --no-verify-peer https://github.com/fusion809/freebsd-zfs-manual-install/r
 
 . After the final command of this script is executed (which is a `shutdown -r now`)&mdash;still with the live DVD image inserted&mdash;press <kbd>Esc</kbd> as soon as you see the FreeBSD Bootloader menu, which is:
 
-![FreeBSD Bootloader screen][11]
+![FreeBSD Bootloader screen][12]
 
-. At the "ok" prompt run what is in [`ok-prompt.sh`][11]. Sadly, this must be done manually, although fortunately, it is not that long. This should boot your new FreeBSD install.
+. At the "ok" prompt run what is in [`ok-prompt.sh`][13]. Sadly, this must be done manually, although fortunately, it is not that long. This should boot your new FreeBSD install.
 
-In the newly installed system run what is in [`post-successful-boot.sh`][12]. To execute this in one command run (although as before you may wish to look at it before doing this, just in case you wish to deviate a little from the default):
+In the newly installed system run what is in [`post-successful-boot.sh`][14]. To execute this in one command run (although as before you may wish to look at it before doing this, just in case you wish to deviate a little from the default):
 
 ```sh
 fetch --no-verify-peer https://github.com/fusion809/freebsd-zfs-manual-install/raw/master/post-successful-boot.sh -o /tmp/post-successful-boot.sh
 . /tmp/post-successful-boot.sh
 ```
 
-. To make the system automatically connect to the Internet on boot, if it does not already, add [`etc/rc.local`][13] to `/etc`. 
+. To make the system automatically connect to the Internet on boot, if it does not already, add [`etc/rc.local`][15] to `/etc`. 
 
 ## Setting up GRUB
 
@@ -100,8 +100,8 @@ Everything that is mine to license is licensed under the [GPLv3][22] license.
 [8]: https://wiki.archlinux.org/index.php/Installation_guide
 [9]: https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/11.2/FreeBSD-11.2-RELEASE-amd64-dvd1.iso
 [10]: https://imgur.com/mAvRJRX.png
-[11]: https://imgur.com/sDg6iyR.png
-[12]: https://github.com/fusion809/freebsd-zfs-manual-install/blob/master/live-cd.sh
+[11]: https://github.com/fusion809/freebsd-zfs-manual-install/blob/master/live-cd.sh
+[12]: https://imgur.com/sDg6iyR.png
 [13]: https://github.com/fusion809/freebsd-zfs-manual-install/blob/master/ok-prompt.sh
 [14]: https://github.com/fusion809/freebsd-zfs-manual-install/blob/master/post-successful-boot.sh
 [15]: https://github.com/fusion809/freebsd-zfs-manual-install/blob/master/etc/rc.local
