@@ -61,7 +61,14 @@ fetch --no-verify-peer https://github.com/fusion809/freebsd-zfs-manual-install/r
 
 . At the "ok" prompt run what is in [`ok-prompt.sh`][11]. Sadly, this must be done manually, although fortunately, it is not that long. This should boot your new FreeBSD install.
 
-In the newly installed system run what is in [`post-successful-boot.sh`][12]. To make the system automatically connect to the Internet on boot, if it does not already, add [`etc/rc.local`][13] to `/etc`. 
+In the newly installed system run what is in [`post-successful-boot.sh`][12]. To execute this in one command run (although as before you may wish to look at it before doing this, just in case you wish to deviate a little from the default):
+
+```sh
+fetch --no-verify-peer https://github.com/fusion809/freebsd-zfs-manual-install/raw/master/post-successful-boot.sh -o /tmp/post-successful-boot.sh
+. /tmp/post-successful-boot.sh
+```
+
+. To make the system automatically connect to the Internet on boot, if it does not already, add [`etc/rc.local`][13] to `/etc`. 
 
 ## Setting up GRUB
 
@@ -75,9 +82,13 @@ Reboot into Arch Linux, install GRUB if you have not done so already, then add [
 
 The main source of this information is [this FreeBSD forum post from 2017][18] (archived [here][19]). Some parts I conjured by myself, based partly on experimentation and partly on past FreeBSD experience, like [`etc/rc.local`][15] and the last line of [`post-successful-boot.sh`][14]. 
 
+## Contributing
+
+If you have some improvements to these scripts I would welcome [pull requests][20] (even for something as simple as spelling/grammatical fixes) or [issues][21]. 
+
 ## License
 
-Everything that is mine to license is licensed under the [GPLv3][20] license. 
+Everything that is mine to license is licensed under the [GPLv3][22] license. 
 
 [1]: https://en.wikipedia.org/wiki/VirtualBox
 [2]: https://en.wikipedia.org/wiki/Arch_Linux
@@ -98,4 +109,6 @@ Everything that is mine to license is licensed under the [GPLv3][20] license.
 [17]: https://github.com/fusion809/freebsd-zfs-manual-install/blob/master/etc/grub.d/40_custom
 [18]: https://forums.freebsd.org/threads/installing-freebsd-manually-no-installer.63201/
 [19]: https://web.archive.org/web/20181110072004/https://forums.freebsd.org/threads/installing-freebsd-manually-no-installer.63201/
-[20]: https://github.com/fusion809/freebsd-zfs-manual-install/blob/master/LICENSE
+[20]: https://github.com/fusion809/freebsd-zfs-manual-install/pulls
+[21]: https://github.com/fusion809/freebsd-zfs-manual-install/issues
+[22]: https://github.com/fusion809/freebsd-zfs-manual-install/blob/master/LICENSE
