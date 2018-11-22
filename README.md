@@ -2,35 +2,53 @@
 
 This repository pertains to a [VirtualBox][1] virtual machine of mine, that dual boots [Arch Linux][2] on an [ext4][3] filesystem and [FreeBSD][4] 11.2 on a [ZFS][5] (both on the same virtual disk). Arch Linux does **not** need [ZFS][6] installed in order for the dual-boot to work. 
 
-One side note: I found that ZFS installed on Arch cannot detect my FreeBSD ZFS (I ran `zpool list` with no pools listed), if you know why please let me know via email, or if you prefer an issue/pull request (like if you want to change this sentence in your PR). I suspect it is because ZFS on Linux and FreeBSD ZFS are distinct enough that they do not recognize each other.
+One caveat: I found that ZFS installed on Arch cannot detect my FreeBSD ZFS (I ran `zpool list` with no pools listed), if you know why please let me know via email, or if you prefer an issue/pull request (like if you want to change this sentence in your PR). I suspect it is because ZFS on Linux and FreeBSD ZFS are distinct enough that they do not recognize each other.
 
-I will assume you are reasonably familiar with how to set up a virtual machine in VirtualBox. If you know how to install Arch to a VirtualBox virtual machine then you should be fine in following this guide. If things are unclear open an issue and I will see about any necessary rewording or restructuring of this README or the scripts. 
+I will assume you are reasonably familiar with how to set up a virtual machine in VirtualBox. If you know how to install Arch to a VirtualBox virtual machine then you should be fine in following this guide. If things are unclear, open an issue and I will see about any necessary rewording or restructuring of this README or the scripts. 
 
 ## Virtual machine settings
 
 These are my more relevant settings:
 
 - Operating system: Arch Linux (64-bit).
-	- This does not matter too much, you can choose FreeBSD if you wish, but the FreeBSD system still works fine with this option set to Arch.  
+
+	- This does not matter too much, you can choose FreeBSD if you wish, but the FreeBSD system still works fine with this option set to Arch.
+
 - Base memory: 4096 MB.
+
 	- I think you could get away with even less than 512 MB, as we are working entirely at the command-line, but I chose 4 GB just to be safe.
+
 - Processors: 6.
+
 	- This is entirely up to you, I chose so many cores because I could and because I wanted the tedious parts of this to go as quickly as possible. 
+
 - Boot order: Floppy, Optical, Hard Disk.
+
 	- Also entirely optional, although optical before hard disk is advisable.
+
 - Acceleration: VT-x/AMD-V, Nested Paging, KVM Virtualization.
+
 	- I just chose the defaults here, I do not know if this really matters, but when in doubt just stick to the defaults.
+
 - Video memory: 128 MB.
+
 	- This I chose arbitrarily, just in case I choose to use a GUI, and I think you can set it to whatever you want. 
+
 - Disk size: 128 GB.
+
 	- This too is flexible, although I would not set it to anything less than 10 GB.
+
 - Disk format: VDI.
+
 	- This is the default and it works, so why change it?
+
 - Network adapter 1: Intel PRO/1000 MT Desktop (NAT).
+
 	- Also the default and it works. 
+
 - No EFI firmware. 
 
-In case it proves to be important later this was originally done with VirtualBox 5.2.20, with an openSUSE Tumbleweed 20181107 host. 
+In case it proves to be important later, this was originally done with VirtualBox 5.2.20, with an openSUSE Tumbleweed 20181107 host. 
 
 ## Arch Linux
 
